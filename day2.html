@@ -1023,7 +1023,30 @@ for(var i = 0; i < boxes.length; i++) {
   total += ((2*lByW) + (2*lByH) + (2*wByH)) + min;
 }
 
-console.log(total);
+console.log('part 1: ' + total);
+
+//day 2, part 2
+var ribbonTotal = 0;
+
+for(var x = 0; x < boxes.length; x++) {
+  // ribbon = two smallest dimensions * 2, added together
+  // bow = length * width * height
+  var box = boxes[x].split('x'),
+      l = Number(box[0]),
+      w = Number(box[1]),
+      h = Number(box[2]),
+      max = Math.max(l, w, h),
+      bow = l * w * h,
+      indexOfLargest = box.indexOf(''+max+'');
+      
+  box.splice(indexOfLargest, 1);
+  var ribbon = (Number(box[0])*2) + (Number(box[1])*2);
+  
+  ribbonTotal += ribbon + bow;
+}
+
+console.log('part 2: ' + ribbonTotal);
 </script>
+
 </body>
 </html>
