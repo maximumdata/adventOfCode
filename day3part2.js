@@ -63,7 +63,7 @@ function followDirectionsFromElf() {
     checkForHouse(whichSanta);
   });
   console.log(newTown.length);
-  window.outputEl.innerText += '\nday 3, part 1: '+newTown.length;
+  window.outputEl.innerText += '\nday 3, part 2: '+newTown.length;
 }
 
 (function init() {
