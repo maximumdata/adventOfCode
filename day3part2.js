@@ -57,7 +57,7 @@ function followDirectionsFromElf() {
         whichSanta.x--;
         break;
       default:
-        alert("you received an faulty input of "+input+"!");
+        alert("you received a faulty input of "+input+"!");
         return 0;
     }
     checkForHouse(whichSanta);
