@@ -6,9 +6,8 @@ var input = 'bgvyzdsv',
 
 
 function loop(numOfZeroes) {
-  var attempt = md5(input + counter);
-  var searchString;
-  switch(numOfZeroes){ case 5: searchString = '00000'; break; case 6: searchString = '000000'; break; default: console.log('loop() accepts 5 or 6 only'); return 0; }
+  var attempt = md5(input + counter),
+      searchString = '0'.repeat(numOfZeroes);
   while( attempt.substring(0, numOfZeroes) !== searchString ) {
     counter++;
     attempt = md5(input + counter);
